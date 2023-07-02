@@ -21,10 +21,28 @@
     <ClCompile Include="src\Scripts\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scripts\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scripts\ResultMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Scripts\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Scripts\Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scripts\ResultMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\Walls\MenuWall.txt" />
+    <Text Include="data\Walls\ResultMenus\ResultMenuD.txt" />
+    <Text Include="data\Walls\ResultMenus\ResultMenuO.txt" />
+    <Text Include="data\Walls\ResultMenus\ResultMenuX.txt" />
   </ItemGroup>
 </Project>

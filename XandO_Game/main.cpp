@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Windows.h>
 #include "Core.hpp"
+#include "src/Scripts/Menu.h"
 #include "src/Scripts/Game.h"
 
 int main()
@@ -9,13 +10,13 @@ int main()
 	SetConsoleOutputCP(CP_UTF8);
 
 	Core::Console::SetTitle(L"X AND O");
-	Core::Console::ConsoleSize(25, 15);
-	Core::Console::CursorVisible(false);
-	Core::Console::ScrollbarVisible(false);
 	
-	Game game;
+	Menu menu;
+	while (menu.MainLoop());
 
-	while (game.MainLoop());
+	//Game game;
+
+	//while (game.MainLoop());
 
 	return 0;
 }

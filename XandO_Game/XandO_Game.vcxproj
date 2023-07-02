@@ -153,11 +153,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Scripts\ResultMenu.cpp" />
+    <ClCompile Include="src\Scripts\Menu.cpp" />
     <ClCompile Include="src\Scripts\Game.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Scripts\ResultMenu.h" />
+    <ClInclude Include="src\Scripts\Menu.h" />
     <ClInclude Include="src\Scripts\Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\Walls\MenuWall.txt" />
+    <Text Include="data\Walls\ResultMenus\ResultMenuD.txt" />
+    <Text Include="data\Walls\ResultMenus\ResultMenuO.txt" />
+    <Text Include="data\Walls\ResultMenus\ResultMenuX.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
