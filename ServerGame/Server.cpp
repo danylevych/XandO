@@ -32,7 +32,7 @@ private:
 	std::map<SOCKET, char> users;
 
 	std::vector<std::vector<char>> field;
-	char currentPlayer = 'X';
+	char currentPlayer;
 
 	std::string msg;
 
@@ -43,21 +43,23 @@ private:
 
 public:
 	Server(const std::string& ip, const std::string& host)
-		:ip(ip), host(host), server(INVALID_SOCKET)
-
+		:ip(ip),
+		host(host),
+		server(INVALID_SOCKET),
+		users(),
+		field({
+			{' ', ' ', ' '},
+			{' ', ' ', ' '},
+			{' ', ' ', ' '}
+			}),
+		msg(),
+		currentPlayer('X'),
+		threads()
 	{
 		hints.ai_family = AF_INET;
 		hints.ai_socktype = SOCK_STREAM;
 		hints.ai_protocol = IPPROTO_TCP;
 		hints.ai_flags = AI_PASSIVE;
-
-
-		field =
-		{
-			{' ', ' ', ' '},
-			{' ', ' ', ' '},
-			{' ', ' ', ' '}
-		};
 
 		Init();
 	}
@@ -77,8 +79,6 @@ public:
 
 		closesocket(server);
 	}
-
-
 
 private:
 	void Init()

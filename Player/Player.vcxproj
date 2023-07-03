@@ -118,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,12 +128,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Scripts\ResultMenu.cpp" />
+    <ClCompile Include="src\Scripts\Menu.cpp" />
+    <ClCompile Include="src\Scripts\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Event\Event.vcxproj">
       <Project>{a7e01cfa-6743-4192-90dd-45cbd36c8520}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Scripts\ResultMenu.h" />
+    <ClInclude Include="src\Scripts\Player.h" />
+    <ClInclude Include="src\Scripts\Menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\Walls\MenuWall.txt" />
+    <Text Include="data\Walls\ResultMenus\Win.txt" />
+    <Text Include="data\Walls\ResultMenus\Lose.txt" />
+    <Text Include="data\Walls\ResultMenus\Draw.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
